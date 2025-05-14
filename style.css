@@ -1,3 +1,7 @@
+/*fonts styles imports*/
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Gochi+Hand&display=swap');
+/*end fonts styles imports*/
+
 body {
   background-image: url('../assets/body/background_desktop.jpg');
   padding: 0px;
@@ -8,6 +12,7 @@ body {
   background-attachment: fixed;
   background-color: #000;
 }
+/* end body general styles */
 header {
   display: flex;
   align-items: center;
@@ -21,7 +26,7 @@ header {
   .titleHeader {
     margin: auto;
     color: #fff;
-    font-family: 'Berkshire Swash';
+    font-family: 'Berkshire Swash', serif;
     font-size: 46px;
   }
   .flagHeader {
@@ -62,6 +67,151 @@ header {
     }
   }
 }
+/* end header general styles */
+/* start body content */
+.firstImgsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  img {
+    z-index: 900;
+    max-width: 100%;
+    flex: 1 1 300px;
+  }
+  .letterImg {
+    justify-self: end;
+  }
+}
+@media (max-width: 600px) {
+  .firstImgsContainer {
+    img {
+      flex: 1 1 100%;
+    }
+  }
+}
+/* end first container imgs */
+.stepsFormContainer {
+  margin-top: -32px;
+  padding: 0 48px 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  justify-self: center;
+  font-size: 37px;
+  .stepsContainer {
+    color: #000;
+    font-family: 'Gochi Hand', cursive;
+    padding-top: 50px;
+    .redArrowDesk {
+      margin-left: 150px;
+    }
+  }
+  .formContainer {
+    .headerForm {
+      width: 100%;
+      height: fit-content;
+      text-align: center;
+      background-color: #000;
+      p {
+        margin: 0;
+        font-family: 'Berkshire Swash', serif;
+        color: #fff;
+      }
+    }
+    .inputsContainer {
+      display: flex;
+      flex-direction: column;
+      background-color: #fcb131;
+      padding: 5px 11px 11px;
+      input:first-child {
+        margin-bottom: 20px;
+      }
+      input {
+        padding: 15px 13px;
+        border-radius: 10px;
+        border: none;
+      }
+      button {
+        margin-top: 15px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transition: transform 0.3s ease;
+      }
+      button:hover {
+        transform: scale(0.9);
+      }
+      .bounce-scale:active {
+        transform: scale(1.1);
+      }
+      .privacityLetter {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Arial';
+        color: #000;
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .stepsFormContainer {
+    margin-top: 0;
+    padding-bottom: 50px;
+
+    grid-template-columns: 1fr;
+    justify-items: center;
+    font-size: 31px;
+    .stepsContainer {
+      padding-top: 0;
+      .redArrowDesk {
+        display: none;
+      }
+    }
+    .formContainer {
+      .headerForm {
+        display: none;
+      }
+      .inputsContainer {
+        background-color: transparent;
+        input {
+          border: 2px solid red;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .stepsFormContainer {
+    font-size: 25px;
+    .formContainer {
+      .headerForm {
+        display: none;
+      }
+      .inputsContainer {
+        background-color: transparent;
+        input {
+          width: 280px;
+          margin: auto;
+        }
+        button {
+          img {
+            width: 300px;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
+/* end second container steps and form */
+
 footer {
   width: 100%;
   padding-bottom: 60px;
@@ -85,13 +235,13 @@ footer {
 }
 @media (max-width: 640px) {
   footer {
-  padding-bottom: 30px;
+    padding-bottom: 30px;
     .footerContainer {
-      .copyRight{
+      .copyRight {
         margin-bottom: 0;
       }
       .descriptionFooter {
-      display: none;
+        display: none;
       }
     }
   }
@@ -103,3 +253,4 @@ footer {
     }
   }
 }
+/* end footer general styles */
