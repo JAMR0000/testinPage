@@ -103,9 +103,10 @@ header {
   .stepsContainer {
     color: #000;
     font-family: 'Gochi Hand', cursive;
-  }
-  .stepsContainer {
     padding-top: 50px;
+    .redArrowDesk {
+      margin-left: 150px;
+    }
   }
   .formContainer {
     .headerForm {
@@ -149,9 +150,9 @@ header {
         padding-top: 10px;
         text-align: center;
         font-size: 13px;
-        font-family: "Arial";
+        font-family: 'Arial';
         color: #000;
-        a{
+        a {
           color: #000;
         }
       }
@@ -162,11 +163,16 @@ header {
 @media (max-width: 960px) {
   .stepsFormContainer {
     margin-top: 0;
+    padding-bottom: 50px;
+
     grid-template-columns: 1fr;
     justify-items: center;
     font-size: 31px;
     .stepsContainer {
       padding-top: 0;
+      .redArrowDesk {
+        display: none;
+      }
     }
     .formContainer {
       .headerForm {
@@ -195,7 +201,7 @@ header {
           margin: auto;
         }
         button {
-          img{
+          img {
             width: 300px;
             margin: auto;
           }
@@ -204,6 +210,7 @@ header {
     }
   }
 }
+/* end second container steps and form */
 
 footer {
   width: 100%;
