@@ -3,14 +3,13 @@
 /*end fonts styles imports*/
 
 body {
-  background-image: url('../assets/body/background_desktop.jpg');
+  background-image: url('./assets/body/background_desktop.jpg') !important;
   padding: 0px;
   margin: 0px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  background-color: #000;
 }
 /* end body general styles */
 header {
